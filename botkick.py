@@ -180,20 +180,7 @@ def SEND_MESSAGE(op):
 		       except Exception as error:
                    	 print error
 #-------------------------------------------------------------	
- if msg.text == "cctv":
-                    if msg.to in wait['readPoint']:
-                        if wait["ROM"][msg.to].items() == []:
-                            chiya = ""
-                        else:
-                            chiya = ""
-                            for rom in wait["ROM"][msg.to].items():
-                                print rom
-                                chiya += rom[1] + "\n"
 
-                        sendMessage(msg.to, "People who readed %s\nthat's it\n\nPeople who have ignored reads\n%sIt is abnormal ♪\n\nReading point creation date n time:\n[%s]"  % (wait['readMember'][msg.to],chiya,setTime[msg.to]))
-                    else:
-                        sendMessage(msg.to, "An already read point has not been set.\n「set」you can send ♪ read point will be created ♪")
-#-------------------------------------------------------------
         else:
             pass
 
