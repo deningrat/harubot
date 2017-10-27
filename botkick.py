@@ -102,7 +102,7 @@ def SEND_MESSAGE(op):
                     elapsed_time = time.time() - start
                     sendMessage(msg.to, "%sseconds" % (elapsed_time))
 #-------------------------------------------------------------			
-                if msg.text == "Spam":
+                if msg.text == "runtah":
                     sendMessage(msg.to,"Ku mengejar bus yang mulai berjalan")
                     sendMessage(msg.to,"Ku ingin ungkapkan kepada dirimu")
                     sendMessage(msg.to,"Kabut dalam hatiku telah menghilang")
@@ -164,10 +164,9 @@ def SEND_MESSAGE(op):
                     sendMessage(msg.to,"Ungkapkan perasaanmu")
                     sendMessage(msg.to,"Jujurlah dari sekarang juga..")
                     sendMessage(msg.to,"SPAM IS DONE")
-                    sendMessage(msg.to,"Created By : Anton")
-                    sendMessage(msg.to,"Subscribe Line : http://line.me/ti/p/~antonlou")
+                    sendMessage(msg.to,"Created By : Deni")                 
 #-------------------------------------------------------------			
-                if msg.text == "Tagall":
+                if msg.text == "Tagsemua":
 		      group = client.getGroup(msg.to)
 		      mem = [contact.mid for contact in group.members]
 		      for mm in mem:
@@ -180,7 +179,21 @@ def SEND_MESSAGE(op):
                          client.sendMessage(msg)
 		       except Exception as error:
                    	 print error
-#-------------------------------------------------------------		
+#-------------------------------------------------------------	
+ if msg.text == "cctv":
+                    if msg.to in wait['readPoint']:
+                        if wait["ROM"][msg.to].items() == []:
+                            chiya = ""
+                        else:
+                            chiya = ""
+                            for rom in wait["ROM"][msg.to].items():
+                                print rom
+                                chiya += rom[1] + "\n"
+
+                        sendMessage(msg.to, "People who readed %s\nthat's it\n\nPeople who have ignored reads\n%sIt is abnormal ♪\n\nReading point creation date n time:\n[%s]"  % (wait['readMember'][msg.to],chiya,setTime[msg.to]))
+                    else:
+                        sendMessage(msg.to, "An already read point has not been set.\n「set」you can send ♪ read point will be created ♪")
+#-------------------------------------------------------------
         else:
             pass
 
