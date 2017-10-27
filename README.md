@@ -1,4 +1,4 @@
 # BotKick
 Self Bot Kicker Line
-Created by: AntonLow
-Line id: @antonlou
+Created by: deni
+Line id: @deningrat
